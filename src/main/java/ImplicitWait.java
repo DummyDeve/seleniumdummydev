@@ -11,8 +11,7 @@ import java.util.List;
 
 public class ImplicitWait {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "/home//Selenium/Drivers/chromedriver");
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver = Locatord.configDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         String[] itemsNeeded= {"Cucumber","Brocolli","Beetroot"};
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");

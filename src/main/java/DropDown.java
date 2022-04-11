@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DropDown {
     public static void main(String[] args) throws InterruptedException {
-        WebDriver driver = DropDown.configDriver();
+        WebDriver driver = Locatord.configDriver();
         driver.manage().window().maximize();
         driver.get(Constants.WEB_URL_FLIGHTBOOK_CLASS);
         staticDropdown(driver);
@@ -21,17 +21,7 @@ public class DropDown {
         calendarValidate(driver);
         clickSearchButton(driver);
     }
-    public static WebDriver configDriver(){
-        System.setProperty("webdriver.chrome.driver","/home//Selenium/Drivers/chromedriver");
-        WebDriver driver = new ChromeDriver(); // gecko driver for firefox
-        return driver;
-        ///========= FireFox Browser =========
-//        System.setProperty("webdriver.gecko.driver","/home//Selenium/Drivers/geckodriver");
-//        WebDriver driver = new FirefoxDriver();
 
-        //====== Microsoft driver
-        // edge drive
-    }
 
     //Click Search Button
     public static void clickSearchButton(WebDriver driver){

@@ -50,8 +50,8 @@ public class Locatord {
     }
 
     //======================Config Driver==============================
-    public WebDriver configDriver(){
-        System.setProperty("webdriver.chrome.driver","/home//Selenium/Drivers/chromedriver");
+    public static WebDriver configDriver(){
+        System.setProperty("webdriver.chrome.driver","/Users/nishantgupta/Selenium/chromedriver");
         WebDriver driver = new ChromeDriver(); // gecko driver for firefox
         return driver;
         ///========= FireFox Browser =========

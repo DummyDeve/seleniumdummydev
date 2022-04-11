@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Locator3 {
     public static void main(String[] args) {
-        WebDriver driver = Locator3.configDriver();
+        WebDriver driver = Locatord.configDriver();
         driver.get(Constants.WEB_URL_LOCATOR3_AutomationPractice_CLASS);
         Locator3.followingSibling(driver);
     }
@@ -16,15 +16,5 @@ public class Locator3 {
         System.out.println(driver.findElement(By.xpath("//header/div/button[1]/parent::div/button[1]")).getText());
 
     }
-    public static WebDriver configDriver(){
-        System.setProperty("webdriver.chrome.driver","/home//Selenium/Drivers/chromedriver");
-        WebDriver driver = new ChromeDriver(); // gecko driver for firefox
-        return driver;
-        ///========= FireFox Browser =========
-//        System.setProperty("webdriver.gecko.driver","/home//Selenium/Drivers/geckodriver");
-//        WebDriver driver = new FirefoxDriver();
 
-        //====== Microsoft driver
-        // edge drive
-    }
 }

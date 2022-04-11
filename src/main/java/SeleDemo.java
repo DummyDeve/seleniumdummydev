@@ -10,25 +10,14 @@ public class SeleDemo{
 
 
         SeleDemo selenium = new SeleDemo();
-        WebDriver driver = selenium.configDriver();
+        WebDriver driver = Locatord.configDriver();
         selenium.openWebsite(driver);
         selenium.showContentOnConsole(driver);
         selenium.closeDriver(driver);
 
 
     }
-    //Config Driver
-    public WebDriver configDriver(){
-        System.setProperty("webdriver.chrome.driver","/home//Selenium/Drivers/chromedriver");
-        WebDriver driver = new ChromeDriver(); // gecko driver for firefox
-        return driver;
-        ///========= FireFox Browser =========
-//        System.setProperty("webdriver.gecko.driver","/home//Selenium/Drivers/geckodriver");
-//        WebDriver driver = new FirefoxDriver();
 
-        //====== Microsoft driver
-        // edge drive
-    }
     //Get the URL
     public void openWebsite(WebDriver driver){
         driver.get(Constants.WEB_URL_SELEDEMO_CLASS);
